@@ -1,0 +1,49 @@
+<html>
+<title> My Calculator </title>
+<body>
+<h3> Calculator </h3>
+<form method="POST">
+First Number:<input type="number"name="n1">
+<br>
+Second Number:<input type="number"name="n2">
+<br>
+<input type="Submit"name="ADD"value="+">
+<input type="Submit"name="SUB"value="-">
+<input type="Submit"name="MUL"value="*">
+<input type="Submit"name="DIV"value="/">
+</form>
+<?php
+if(isset($_POST['ADD']))
+ {
+  $a = $_POST["n1"];
+  $b = $_POST["n2"];
+ $c = $a + $b;
+echo $c;
+ }
+else
+if(isset($_POST['SUB']))
+{
+$a = $_POST["n1"];
+$b = $_POST["n2"];
+$c = $a - $b;
+echo $c;
+}
+else
+if(isset($_POST['MUL']))
+{
+ $a = $_POST["n1"];
+$b = $_POST["n2"];
+$c = $a * $b;
+echo $c;
+}
+else
+if(isset($_POST['DIV']))
+{
+ $a = $_POST["n1"];
+ $b = $_POST["n2"];
+ $c = $a / $b;
+echo $c;
+}
+?>
+</body>
+</html>
